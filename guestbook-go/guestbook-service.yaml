@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: guestbook
+  name: guestbook-go
   labels:
-    app: guestbook
+    app: guestbook-go
 spec:
   ports:
   - port: 3000
     targetPort: http-server
   selector:
-    app: guestbook
+    app: guestbook-go

@@ -1,20 +1,20 @@
 kind: ReplicationController
 apiVersion: v1
 metadata:
-  name: guestbook
+  name: guestbook-go
   labels:
-    app: guestbook
+    app: guestbook-go
 spec:
   replicas: 3
   selector:
-    app: guestbook
+    app: guestbook-go
   template:
     metadata:
       labels:
-        app: guestbook
+        app: guestbook-go
     spec:
       containers:
-      - name: guestbook
+      - name: guestbook-go
         image: k8s.gcr.io/guestbook:v3
         ports:
         - name: http-server
